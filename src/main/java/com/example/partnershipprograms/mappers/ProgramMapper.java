@@ -27,8 +27,4 @@ public class ProgramMapper {
         }
         return programDTOList;
     }
-
-    public Program convertToEntity(ProgramDTO dto){
-        return mapper.map(dto, Program.class);
-    }
 }

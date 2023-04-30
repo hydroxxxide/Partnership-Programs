@@ -41,7 +41,7 @@ public class UserService {
         repository.deleteById(id);
     }
 
-    public void subscribeUserToProgram(Long userId, Long programId) throws Exception {
+    public void subscribeUserToProgram(Long userId, Long programId) {
         try {
             User user = getById(userId);
             Program program = programRepository.findById(programId).orElse(null);
