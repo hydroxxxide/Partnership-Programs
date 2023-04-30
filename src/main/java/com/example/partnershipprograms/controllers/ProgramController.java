@@ -4,6 +4,7 @@ import com.example.partnershipprograms.dto.ProgramDTO;
 import com.example.partnershipprograms.mappers.ProgramMapper;
 import com.example.partnershipprograms.models.Program;
 import com.example.partnershipprograms.services.ProgramService;
+import com.example.partnershipprograms.services.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -47,5 +48,10 @@ public class ProgramController {
     @GetMapping("/popular")
     public List<ProgramDTO> getPopularPrograms(){
         return mapper.convertToDTOList(service.sortByPopularity());
+    }
+
+    @PutMapping("/ban/{userId}/{programId}")
+    public void banUser(@PathVariable Long userId, @PathVariable Long programId){
+        service.banUser(userId, programId);
     }
 }
