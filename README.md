@@ -23,7 +23,7 @@ https://www.postman.com/java-team-f22/workspace/parntership-programs-workspace/c
 1. Создайте новую базу данных _"yourdatabase"_ используя PgAdmin (вы можете заменить имя вашей бд "yourdatabase" на любое другое)
 2. Добавьте в application.properties следующий код (поле "yourdatabase" измените на имя вашей новой базы данных):
 ```sh
-   server.port=9090
+server.port=9090
 spring.datasource.url=jdbc:postgresql://localhost:5432/имя-вашей-бд
 spring.datasource.username=postgres
 spring.datasource.password=postgres
